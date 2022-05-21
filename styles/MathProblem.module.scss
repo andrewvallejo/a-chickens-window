@@ -1,0 +1,27 @@
+@import "./styles";
+
+.mathContainer {
+	display: flex;
+	flex-direction: row;
+	width: 50%;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.operator {
+	font-size: 4rem;
+	font-weight: bold;
+	text-shadow: $shadow-text;
+}
+
+.block {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	box-shadow: $shadow-math-block;
+	border-radius: 25px;
+	width: 8rem;
+	aspect-ratio: 1;
+	background: $color-primary-dark;
+}

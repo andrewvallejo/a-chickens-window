@@ -1,0 +1,17 @@
+@import "./styles";
+
+.main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	user-select: none;
+	min-height: 100vh;
+	color: $color-primary-dark;
+}
+
+.title {
+	text-shadow: $shadow-text;
+	font-size: 4rem;
+	line-height: 1.15;
+}

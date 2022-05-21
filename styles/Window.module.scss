@@ -1,0 +1,43 @@
+@import "./styles";
+
+.window {
+	position: relative;
+	box-shadow: $shadow-primary;
+	overflow: hidden;
+	border-radius: 7px;
+	width: 92%;
+	height: 22rem;
+	background: $color-sky;
+}
+
+.sun {
+	position: absolute;
+	top: -3rem;
+	right: -3rem;
+	filter: blur(.3rem);
+	border-radius: 50%;
+	box-shadow: $shadow-sun;
+	width: 12rem;
+	height: 12rem;
+	background: $color-sun;
+}
+
+.cloud {
+	position: absolute;
+	z-index: 1;
+	&.low {
+		inset: 1rem;
+		transform: scale(.7);
+		filter: drop-shadow($shadow-clouds) drop-shadow($shadow-cloud-low);
+	}
+	&.high {
+		top: 6rem;
+		right: 5rem;
+		filter: drop-shadow($shadow-clouds) drop-shadow($shadow-cloud-high);
+	}
+}
+
+.grass {
+	position: absolute;
+	bottom: -1.5rem;
+}
