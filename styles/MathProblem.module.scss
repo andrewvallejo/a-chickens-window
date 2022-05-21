@@ -3,7 +3,7 @@
 .mathContainer {
 	display: flex;
 	flex-direction: row;
-	width: 50%;
+	width: 90%;
 	align-items: center;
 	justify-content: space-around;
 }
@@ -15,13 +15,40 @@
 }
 
 .block {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	box-shadow: $shadow-math-block;
 	border-radius: 25px;
-	width: 8rem;
+	width: 16rem;
 	aspect-ratio: 1;
 	background: $color-primary-dark;
+}
+
+.number {
+	position: absolute;
+	inset: 50 / 50;
+	text-shadow: $shadow-text;
+	font-size: 6rem;
+	color: $color-sun;
+}
+
+.resultsForm {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+
+.resultsInput {
+	width: 100%;
+	height: 8rem;
+	padding: 1rem;
+	font-size: 6rem;
+	text-shadow: $shadow-text;
+	text-align: center;
+	color: white;
 }
