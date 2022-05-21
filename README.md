@@ -1,34 +1,81 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align='center'>
+
+# A Chicken's Window
+
+A simple addition math game where each answer right spawns an animal.
+
+**Disclaimer:** This project was made as a skill test in which I was to create a simple maths game in two days, emphasizing presentation and animations.
+
+
+<div align='left'>
+<sub>made with</sub>
+
+
+<div align='center'>
+
+<img src="https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=000&style=flat-square" alt="React Badge">
+<img src="https://img.shields.io/badge/Next.js-000?logo=nextdotjs&logoColor=fff&style=flat-square" alt="Next.js Badge">
+<img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff&style=flat-square" alt="TypeScript Badge">
+<img src="https://img.shields.io/badge/Sass-C69?logo=sass&logoColor=fff&style=flat-square" alt="Sass Badge">
+<img src='https://img.shields.io/badge/Vercel-000?logo=vercel&logoColor=fff&style=flat-square' alt='Framer Motion Badge'>
+<img src='https://img.shields.io/badge/Framer-05F?logo=framer&logoColor=fff&style=flat-square' alt='Vercel Badge'>
+<img src='https://img.shields.io/badge/Figma-F24E1E?logo=figma&logoColor=fff&style=flat-square' alt='Figma Badge'>
+
+---
+
+</div>
 
 ## Getting Started
 
-First, run the development server:
+First, clone down the repo and run the development server in the terminal (Or visit the deployed site).
 
 ```bash
 npm run dev
 # or
 yarn dev
+# or
+pnpm run dev
 ```
+
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## How To Play
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Type in your guess in the results block of the math problem.
+Answer incorrectly, and you'll be given another chance to answer.
+A chicken will spawn in the window with every correct guess.
+How many chickens can you generate?
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## About the process
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+You can see the [wireframes](https://www.figma.com/file/yaB8KfTEUeft3t71DQDWXA/Chickens-Window?node-id=30%3A2) that I made for this project.
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+> You can see that the earlier versions were much more complex, but after having a UX designer look at my wireframe, we concluded it would've been too ambitious for the time I had allotted for the project.
+>
+> Based on her feedback, I eliminated the counting aspect I had in mind for the game and simplified the layout.
+>
+>  also spent time prior researching new animation techniques and technologies. I learned how to animate pixel sprites and did a shallow dive into understanding how Framer Motion would work within my project. One feature that I enjoy from Framer Motions is the ability to set state within the animation divs! How awesome is that?
+
+---
+
+<div align='center'>
+
+## Created by Andrew Vallejo
+
+</div>
+
+<div align='center'>
+
+Follow me on [Linkedin](https://www.linkedin.com/in/andrewvallejo/) or  look at more of my work on [Github](https://www.github.com/andrewvallejo)!
+
+</div>
+
+
+---
