@@ -1,6 +1,5 @@
 import { createContext, useContext, useMemo, useState } from "react";
 
-// create a context for game where the initial state is the game state
 const GameContext = createContext<{
 	setPending: (pending: boolean) => void;
 	level: number;
