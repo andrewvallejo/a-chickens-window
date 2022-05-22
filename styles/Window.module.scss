@@ -79,6 +79,10 @@
 	image-rendering: pixelated;
 	width: calc(4.2px * 15);
 	height: calc(4.2px * 15);
+	cursor: grab;
+	&:active {
+		cursor: grabbing;
+	}
 }
 
 .spritesheet {
@@ -87,6 +91,7 @@
 	width: calc(1.9rem * 15);
 	aspect-ratio: 1;
 	animation: animateSprite 2s steps(7) 2s infinite;
+	pointer-events: none;
 }
 
 @media screen and (max-width: 600px) {
