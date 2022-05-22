@@ -1,4 +1,4 @@
-const getRandomNum = () => {
+const getRandomNum = (): number => {
 	return Math.floor(Math.random() * 10);
 };
 
