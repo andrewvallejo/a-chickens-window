@@ -8,7 +8,7 @@ export const Grass = ({ children }: { children: JSX.Element }): JSX.Element => {
 
 	return (
 		<div className={styles.grass}>
-			<Image src='/images/grass.png' height={200} width={2400} alt='grass' />
+			<Image src='/images/grass.png' height={200} width={2400} alt='grass' layout='fill' />
 			<div className={styles.spawnGrid}>
 				{level > 0 && <div> {children}</div>}
 				{level > 1 && <div> {children}</div>}
