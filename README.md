@@ -7,9 +7,6 @@ A simple addition math game where each answer right spawns an animal.
 **Disclaimer:** This project was made as a skill test in which I was to create a simple maths game in two days, emphasizing presentation and animations.
 
 
-<div align='left'>
-<sub>made with</sub>
-
 
 <div align='center'>
 
