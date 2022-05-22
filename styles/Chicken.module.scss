@@ -20,3 +20,16 @@ $pixel-size: 15;
 	aspect-ratio: 1;
 	animation: animateSprite 2s steps(7) 2s infinite;
 }
+
+.peter {
+	position: absolute;
+	top: -1.5rem;
+	left: 20rem;
+	z-index: 1;
+}
+.mary {
+	position: absolute;
+	top: -1.5rem;
+	right: 25em;
+	z-index: 1;
+}
