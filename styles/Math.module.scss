@@ -45,7 +45,7 @@
 }
 
 .resultsInput {
-	font-size: 6rem;
+	font-size: clamp(5rem, 7vw, 6.5rem);
 	text-shadow: $shadow-text;
 	text-align: center;
 	color: white;
