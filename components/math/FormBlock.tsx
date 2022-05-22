@@ -42,7 +42,7 @@ export const FormBlock = ({ children }: { children: number }): JSX.Element => {
 					min={0}
 					max={100}
 					value={answer || ""}
-					onChange={(e) => setAnswer(e.target.value)}
+					onChange={(e) => e.target.value.length <= 2 && setAnswer(e.target.value)}
 				/>
 			</form>
 		</article>
