@@ -9,7 +9,8 @@ export const MathProblem = (): JSX.Element => {
 	const { answer, addends } = useGameContext();
 
 	return (
-		<motion.div
+		<motion.section
+			className={styles.mathContainer}
 			initial='hidden'
 			animate='visible'
 			variants={{
@@ -18,6 +19,7 @@ export const MathProblem = (): JSX.Element => {
 					opacity: 1,
 					translateY: 0,
 					transition: {
+						staggerChildren: 1,
 						delay: 2.35,
 						duration: 1,
 						type: "spring",
@@ -25,13 +27,11 @@ export const MathProblem = (): JSX.Element => {
 					}
 				}
 			}}>
-			<section className={styles.mathContainer}>
-				<Block>{[ addends[0], "addend" ]}</Block>
-				<Operator>+</Operator>
-				<Block>{[ addends[1], "addend" ]}</Block>
-				<Operator>=</Operator>
-				<Block>{[ parseInt(answer), "form" ]}</Block>
-			</section>
-		</motion.div>
+			<Block>{[ addends[0], "addend" ]}</Block>
+			<Operator>+</Operator>
+			<Block>{[ addends[1], "addend" ]}</Block>
+			<Operator>=</Operator>
+			<Block>{[ parseInt(answer), "form" ]}</Block>
+		</motion.section>
 	);
 };
