@@ -1,6 +1,6 @@
 @import "./styles";
 
-$pixel-size: 4;
+$pixel-size: 15;
 
 .chicken {
 	position: relative;
@@ -9,13 +9,14 @@ $pixel-size: 4;
 	justify-content: center;
 	image-rendering: pixelated;
 	overflow: hidden;
-	width: calc(30px * var(--pixel-size));
-	height: calc(30px * var(--pixel-size));
-	padding-inline-start: 5px;
+	width: calc(4.2px * $pixel-size);
+	height: calc(4.2px * $pixel-size);
 }
 
 .spritesheet {
 	position: absolute;
 	inset: 0;
-	animation: animateSprite 1.5s steps(7) infinite;
+	width: calc(1.9rem * $pixel-size);
+	aspect-ratio: 1;
+	animation: animateSprite 2s steps(7) 2s infinite;
 }
