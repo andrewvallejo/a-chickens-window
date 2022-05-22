@@ -20,7 +20,7 @@ const GameContext = createContext<{
 	setResult: () => {}
 });
 
-export const GameWrapper = ({ children }: { children: React.ReactNode }) => {
+export const GameWrapper = ({ children }: { children: React.ReactNode }): JSX.Element => {
 	const [ level, setLevel ] = useState<number>(0);
 	const [ result, setResult ] = useState<number>(0);
 	const [ addends, setAddends ] = useState<[number, number]>([ 0, 0 ]);
@@ -39,6 +39,4 @@ export const GameWrapper = ({ children }: { children: React.ReactNode }) => {
 	return <GameContext.Provider value={context}>{children}</GameContext.Provider>;
 };
 
-export const useGameContext = () => {
-	return useContext(GameContext);
-};
+export const useGameContext = () => useContext(GameContext);

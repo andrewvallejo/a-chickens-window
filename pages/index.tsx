@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 
 import { Layout } from "../components/Layout";
-import { MathProblem } from "../components/MathProblem";
-import { Window } from "../components/Window";
+import { MathProblem } from "../components/math/MathProblem";
+import { Window } from "../components/window/Window";
 import { useGameContext } from "../context/GameContext";
 import { getRandomPair } from "../lib/math";
 
