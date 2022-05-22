@@ -4,10 +4,10 @@ import { useGameContext } from "../context/GameContext";
 import styles from "../styles/MathProblem.module.scss";
 
 export const FormBlock = ({ children }: { children: number }) => {
-	const inputRef = createRef<HTMLInputElement>();
-
-	const [ input, setInput ] = useState(0);
+	const [ input, setInput ] = useState("");
 	const { level, setLevel } = useGameContext();
+
+	const inputRef = createRef<HTMLInputElement>();
 
 	useEffect(
 		() => {
@@ -15,17 +15,20 @@ export const FormBlock = ({ children }: { children: number }) => {
 				inputRef.current.focus();
 			}
 		},
-		[ inputRef ]
+		[ input, inputRef ]
 	);
 
 	const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
 		e.preventDefault();
-		if (!input) {
-			setInput(0);
-		}
-		if (input === children) {
-			setInput(0);
+		const guess = parseInt(input, 10);
+
+		if (guess === children) {
+			setInput("");
 			setLevel(level + 1);
+		}
+
+		if (inputRef.current) {
+			inputRef.current.focus();
 		}
 	};
 
@@ -36,10 +39,12 @@ export const FormBlock = ({ children }: { children: number }) => {
 					className={styles.resultsInput}
 					type='number'
 					ref={inputRef}
+					min={0}
+					max={100}
 					value={input || ""}
-					onChange={(e) => setInput(parseInt(e.target.value))}
+					onChange={(e) => setInput(e.target.value)}
 				/>
-			</form>{" "}
+			</form>
 		</article>
 	);
 };
