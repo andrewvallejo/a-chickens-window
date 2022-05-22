@@ -1,11 +1,13 @@
 import { createRef, useEffect, useState } from "react";
 
+import { useGameContext } from "../context/GameContext";
 import styles from "../styles/MathProblem.module.scss";
 
 export const FormBlock = ({ children }: { children: number }) => {
 	const inputRef = createRef<HTMLInputElement>();
 
 	const [ input, setInput ] = useState(0);
+	const { level, setLevel } = useGameContext();
 
 	useEffect(
 		() => {
@@ -21,10 +23,10 @@ export const FormBlock = ({ children }: { children: number }) => {
 		if (!input) {
 			setInput(0);
 		}
-		// if (input === children) {
-		// 	setPending(true);
-		// 	setInput(0);
-		// }
+		if (input === children) {
+			setInput(0);
+			setLevel(level + 1);
+		}
 	};
 
 	return (
