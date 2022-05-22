@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-import styles from "../styles/Window.module.scss";
+import styles from "../../styles/Window.module.scss";
 
 export const Chicken = (): JSX.Element => {
 	return (
