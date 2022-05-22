@@ -15,21 +15,20 @@ export const Layout = ({ children }: { children: JSX.Element[] }): JSX.Element =
 				<link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
 				<link rel='manifest' href='/site.webmanifest' />
 			</Head>
-			<header className={styles.header}>
-				<motion.div
-					initial='hidden'
-					animate='visible'
-					variants={{
-						hidden: { scale: 0.8, opacity: 0 },
-						visible: {
-							scale: 1,
-							opacity: 1,
-							transition: { delay: 1.5, duration: 1.75, type: "spring" }
-						}
-					}}>
-					<h1 className={styles.title}>{`A Chicken's Window`}</h1>
-				</motion.div>
-			</header>
+			<motion.h1
+				className={styles.title}
+				initial='hidden'
+				animate='visible'
+				variants={{
+					hidden: { scale: 0.8, opacity: 0 },
+					visible: {
+						scale: 1,
+						opacity: 1,
+						transition: { delay: 1.5, duration: 1.75, type: "spring" }
+					}
+				}}>
+				{`A Chicken's Window`}
+			</motion.h1>
 			<main className={styles.main}>{children}</main>
 		</div>
 	);
