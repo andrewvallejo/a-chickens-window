@@ -1,18 +1,26 @@
 @import "./styles";
 
-.main {
+.body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-around;
 	user-select: none;
-	min-height: 100vh;
+	height: calc(100vh - 40rem);
+}
+
+.main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 7rem;
+	width: 100%;
+	max-width: 100rem;
 	color: $color-primary-dark;
 }
 
 .title {
-	text-shadow: $shadow-text;
-	font-size: 4rem;
-	line-height: 1.15;
+	font-size: 5rem;
 	text-align: center;
+	text-shadow: $shadow-text;
 }

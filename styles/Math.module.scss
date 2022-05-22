@@ -3,7 +3,8 @@
 .mathContainer {
 	display: flex;
 	flex-direction: row;
-	width: 75%;
+	gap: 5rem;
+	max-width: 100rem;
 	align-items: center;
 	justify-content: space-around;
 }
@@ -22,7 +23,7 @@
 	justify-content: center;
 	box-shadow: $shadow-math-block;
 	border-radius: 25px;
-	width: 14rem;
+	width: clamp(8rem, 15vw, 14rem);
 	aspect-ratio: 1;
 	background: $color-primary-dark;
 }
@@ -44,11 +45,22 @@
 }
 
 .resultsInput {
-	width: 100%;
-	height: 8rem;
-	padding: 1rem;
 	font-size: 6rem;
 	text-shadow: $shadow-text;
 	text-align: center;
 	color: white;
+}
+
+@media screen and (max-width: 800px) {
+	.mathContainer {
+		transition: all 0.5s ease-in-out;
+		gap: 2rem;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.mathContainer {
+		transition: all 0.5s ease-in-out;
+		gap: 0rem;
+	}
 }
