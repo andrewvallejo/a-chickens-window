@@ -26,11 +26,11 @@ export const MathProblem = (): JSX.Element => {
 				}
 			}}>
 			<section className={styles.mathContainer}>
-				<Block>{addends[0]}</Block>
+				<Block>{[ addends[0], "addend" ]}</Block>
 				<Operator>+</Operator>
-				<Block>{addends[1]}</Block>
+				<Block>{[ addends[1], "addend" ]}</Block>
 				<Operator>=</Operator>
-				<Block>{parseInt(answer)}</Block>
+				<Block>{[ parseInt(answer), "form" ]}</Block>
 			</section>
 		</motion.div>
 	);
