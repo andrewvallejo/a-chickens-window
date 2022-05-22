@@ -5,6 +5,7 @@
 	box-shadow: $shadow-primary;
 	overflow: hidden;
 	border-radius: 7px;
+	max-width: 100%;
 	width: 92%;
 	height: 22rem;
 	background: $color-sky;
@@ -26,7 +27,8 @@
 	position: absolute;
 	z-index: 1;
 	&.low {
-		inset: .5rem;
+		top: 2rem;
+		left: 1rem;
 		transform: scale(.7);
 		filter: drop-shadow($shadow-clouds) drop-shadow($shadow-cloud-low);
 	}
