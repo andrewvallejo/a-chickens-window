@@ -23,6 +23,7 @@ export const FormBlock = ({ children }: { children: number }): JSX.Element => {
 
 		if (guess === result) {
 			setLevel(level + 1);
+			setAnswer("");
 		}
 
 		if (inputRef.current) {
