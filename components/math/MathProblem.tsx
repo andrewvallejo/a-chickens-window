@@ -3,11 +3,10 @@ import { motion } from "framer-motion";
 import { useGameContext } from "../../context/GameContext";
 import styles from "../../styles/Math.module.scss";
 import { Block } from "./Block";
-import { FormBlock } from "./FormBlock";
 import { Operator } from "./Operator";
 
 export const MathProblem = (): JSX.Element => {
-	const { result, addends } = useGameContext();
+	const { answer, addends } = useGameContext();
 
 	return (
 		<motion.div
@@ -31,7 +30,7 @@ export const MathProblem = (): JSX.Element => {
 				<Operator>+</Operator>
 				<Block>{addends[1]}</Block>
 				<Operator>=</Operator>
-				<FormBlock>{result}</FormBlock>
+				<Block>{parseInt(answer)}</Block>
 			</section>
 		</motion.div>
 	);

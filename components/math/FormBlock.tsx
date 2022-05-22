@@ -4,8 +4,7 @@ import { useGameContext } from "../../context/GameContext";
 import styles from "../../styles/Math.module.scss";
 
 export const FormBlock = ({ children }: { children: number }): JSX.Element => {
-	const [ answer, setAnswer ] = useState("");
-	const { level, setLevel } = useGameContext();
+	const { level, setLevel, answer, setAnswer, result } = useGameContext();
 
 	const inputRef = createRef<HTMLInputElement>();
 
@@ -22,8 +21,7 @@ export const FormBlock = ({ children }: { children: number }): JSX.Element => {
 		e.preventDefault();
 		const guess = parseInt(answer, 10);
 
-		if (guess === children) {
-			setAnswer("");
+		if (guess === result) {
 			setLevel(level + 1);
 		}
 
@@ -41,7 +39,7 @@ export const FormBlock = ({ children }: { children: number }): JSX.Element => {
 					ref={inputRef}
 					min={0}
 					max={100}
-					value={answer || ""}
+					value={children || ""}
 					onChange={(e) => e.target.value.length <= 2 && setAnswer(e.target.value)}
 				/>
 			</form>
