@@ -1,0 +1,17 @@
+@keyframes animateSprite {
+	from {
+		transform: translate3d(0px, 0, 0);
+	}
+	to {
+		transform: translate3d(-100%, 0, 0);
+	}
+}
+
+@keyframes animateClouds {
+	from {
+		transform: translate3d(400%, 0, 0);
+	}
+	to {
+		transform: translate3d(-400%, 0, 0);
+	}
+}

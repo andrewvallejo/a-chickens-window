@@ -1,0 +1,21 @@
+@import "./styles";
+
+$pixel-size: 4;
+
+.chicken {
+	position: relative;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	image-rendering: pixelated;
+	overflow: hidden;
+	width: calc(30px * var(--pixel-size));
+	height: calc(30px * var(--pixel-size));
+	padding-inline-start: 5px;
+}
+
+.spritesheet {
+	position: absolute;
+	inset: 0;
+	animation: animateSprite 1.5s steps(7) infinite;
+}

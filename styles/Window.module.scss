@@ -24,6 +24,7 @@
 
 .cloud {
 	position: absolute;
+	animation: animateClouds 20s infinite;
 	z-index: 1;
 	&.low {
 		top: 2rem;
