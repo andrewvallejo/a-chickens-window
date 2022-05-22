@@ -6,15 +6,7 @@ import { FormBlock } from "./FormBlock";
 
 export const Block = ({ children }: { children: [number, string] }): JSX.Element => {
 	return (
-		<motion.article
-			className={styles.block}
-			animate={{
-				y: [ 8, 4, 8 ]
-			}}
-			transition={{
-				repeat: Infinity,
-				duration: 5
-			}}>
+		<motion.article className={styles.block}>
 			{children[1] === "form" ? (
 				<FormBlock>{children[0]}</FormBlock>
 			) : (
