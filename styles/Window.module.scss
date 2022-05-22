@@ -26,7 +26,7 @@
 	position: absolute;
 	z-index: 1;
 	&.low {
-		inset: 1rem;
+		inset: .5rem;
 		transform: scale(.7);
 		filter: drop-shadow($shadow-clouds) drop-shadow($shadow-cloud-low);
 	}
