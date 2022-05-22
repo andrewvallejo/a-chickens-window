@@ -4,24 +4,35 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: space-around;
+	justify-content: center;
 	user-select: none;
-	height: calc(100vh - 40rem);
+	min-height: calc(100vh);
+	gap: 5rem;
+}
+
+.header {
+	padding-block: 1rem;
 }
 
 .main {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 7rem;
-	width: 100%;
 	max-width: 100rem;
+	gap: 5rem;
 	color: $color-primary-dark;
 	padding-inline: 2rem;
 }
 
 .title {
-	font-size: 5rem;
+	font-size: clamp(3rem, 10vw, 6.5rem);
 	text-align: center;
 	text-shadow: $shadow-text;
+}
+
+@media screen and (max-width: 600px) {
+	.body,
+	.main {
+		gap: 2rem;
+	}
 }
