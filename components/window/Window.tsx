@@ -1,5 +1,5 @@
 import styles from "../../styles/Window.module.scss";
-import { Chicken } from "./Chicken";
+import { Chicken } from "../Chicken";
 import { Cloud } from "./Cloud";
 import { Grass } from "./Grass";
 

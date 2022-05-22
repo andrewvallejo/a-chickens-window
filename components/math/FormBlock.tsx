@@ -1,7 +1,7 @@
 import { createRef, useEffect, useState } from "react";
 
 import { useGameContext } from "../../context/GameContext";
-import styles from "../../styles/MathProblem.module.scss";
+import styles from "../../styles/Math.module.scss";
 
 export const FormBlock = ({ children }: { children: number }): JSX.Element => {
 	const [ input, setInput ] = useState("");

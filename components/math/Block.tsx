@@ -1,4 +1,4 @@
-import styles from "../../styles/MathProblem.module.scss";
+import styles from "../../styles/Math.module.scss";
 
 export const Block = ({ children }: { children: number }): JSX.Element => {
 	return (
