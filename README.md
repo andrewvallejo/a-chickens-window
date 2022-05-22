@@ -40,6 +40,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## How To Play
 
 Type in your guess in the results block of the math problem.
+You may also use the `Up/Down Arrow Keys` to change your guess.
 Answer incorrectly, and you'll be given another chance to answer.
 A chicken will spawn in the window with every correct guess.
 How many chickens can you generate?
