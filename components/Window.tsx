@@ -9,8 +9,9 @@ export const Window = (): JSX.Element => {
 			<div className={styles.sun} />
 			<Cloud>high</Cloud>
 			<Cloud>low</Cloud>
-			<Chicken />
-			<Grass />
+			<Grass>
+				<Chicken />
+			</Grass>
 		</section>
 	);
 };
