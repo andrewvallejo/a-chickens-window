@@ -9,11 +9,13 @@ export const Window = (): JSX.Element => {
 	return (
 		<motion.section
 			className={styles.window}
-			initial='hidden'
-			animate='visible'
-			variants={{
-				hidden: { scale: 0.8, opacity: 0, width: 0 },
-				visible: { scale: 1, opacity: 1, width: "100%", transition: { delay: 0.25, duration: 1.25 } }
+			animate={{
+				y: [ 12, 8, 12 ]
+			}}
+			transition={{
+				repeat: Infinity,
+				repeatDelay: 2,
+				duration: 8
 			}}>
 			<div className={styles.sun} />
 			<Cloud>high</Cloud>
