@@ -29,7 +29,21 @@ export const Layout = ({ children }: { children: JSX.Element[] }): JSX.Element =
 				}}>
 				{`A Chicken's Window`}
 			</motion.h1>
-			<main className={styles.main}>{children}</main>
+			<motion.main
+				className={styles.main}
+				initial='hidden'
+				animate='visible'
+				variants={{
+					hidden: { scale: 0.8, opacity: 0, width: 0 },
+					visible: {
+						scale: 1,
+						opacity: 1,
+						width: "100%",
+						transition: { delay: 0.25, duration: 1.25 }
+					}
+				}}>
+				{children}
+			</motion.main>
 		</div>
 	);
 };
