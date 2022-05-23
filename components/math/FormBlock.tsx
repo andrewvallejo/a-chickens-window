@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { createRef, useEffect, useState } from "react";
 
 import { useGameContext } from "../../context/GameContext";
@@ -5,6 +6,8 @@ import styles from "../../styles/Math.module.scss";
 
 export const FormBlock = ({ children }: { children: number }): JSX.Element => {
 	const { level, setLevel, answer, setAnswer, result } = useGameContext();
+	const [ currentLevel, setCurrentLevel ] = useState(level);
+	const [ isCorrect, setIsCorrect ] = useState(false);
 
 	const inputRef = createRef<HTMLInputElement>();
 
@@ -13,8 +16,15 @@ export const FormBlock = ({ children }: { children: number }): JSX.Element => {
 			if (inputRef.current) {
 				inputRef.current.focus();
 			}
+			if (currentLevel === level) {
+				setCurrentLevel(level + 1);
+				setIsCorrect(true);
+				setTimeout(() => {
+					setIsCorrect(false);
+				}, 1000);
+			}
 		},
-		[ answer, inputRef ]
+		[ answer, currentLevel, inputRef, level ]
 	);
 
 	const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
@@ -34,15 +44,36 @@ export const FormBlock = ({ children }: { children: number }): JSX.Element => {
 	return (
 		<article className={styles.block}>
 			<form className={styles.resultsForm} onSubmit={handleSubmit}>
-				<input
-					className={styles.resultsInput}
-					type='number'
-					ref={inputRef}
-					min={0}
-					max={100}
-					value={children || ""}
-					onChange={(e) => e.target.value.length <= 2 && setAnswer(e.target.value)}
-				/>
+				{!isCorrect ? (
+					<input
+						className={styles.resultsInput}
+						type='number'
+						ref={inputRef}
+						min={0}
+						max={100}
+						value={children || ""}
+						onChange={(e) => e.target.value.length <= 2 && setAnswer(e.target.value)}
+					/>
+				) : (
+					<motion.div
+						className={styles.resultsInput}
+						initial='hidden'
+						animate='visible'
+						variants={{
+							hidden: { opacity: 0, scale: 0.2 },
+							visible: {
+								opacity: 1,
+								scale: 1,
+								transition: {
+									duration: 0.5,
+									type: "spring",
+									stiffness: 100
+								}
+							}
+						}}>
+						<p className={styles.checkmark}>✔</p>
+					</motion.div>
+				)}
 			</form>
 		</article>
 	);

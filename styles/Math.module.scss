@@ -34,6 +34,10 @@
 	text-shadow: $shadow-text;
 	font-size: clamp(5rem, 7vw, 6.5rem);
 	color: $color-sun;
+	text-decoration: underline;
+	text-decoration-color: $color-grass;
+	text-underline-offset: .5rem;
+	text-decoration-thickness: .5rem;
 }
 
 .resultsForm {
@@ -49,6 +53,16 @@
 	text-shadow: $shadow-text;
 	text-align: center;
 	color: white;
+	text-decoration: underline;
+	text-decoration-color: $color-grass;
+	text-underline-offset: .5rem;
+	text-decoration-thickness: .5rem;
+}
+
+.checkmark {
+	@extend .resultsInput;
+	font-size: clamp(5rem, 7vw, 6.5rem);
+	color: $color-grass;
 }
 
 .gameOver {

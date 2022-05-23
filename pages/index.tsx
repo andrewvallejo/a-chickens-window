@@ -20,7 +20,9 @@ const Home: NextPage = () => {
 			if (pending ||(addends[0] === 0 && addends[1] === 0)) {
 				setCurrentLevel(level);
 				setPending(false);
-				setAddends(getRandomPair());
+				setTimeout(() => {
+					setAddends(getRandomPair());
+				}, 1000);
 			}
       if (!pending) {
 				setResult(addends[0] + addends[1]);
