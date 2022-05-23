@@ -6,3 +6,12 @@
 		transform: translate3d(-100%, 0, 0);
 	}
 }
+
+@keyframes animateSun {
+	from {
+		box-shadow: 0 0 40px $color-sun;
+	}
+	to {
+		box-shadow: 0 0 100px $color-sun;
+	}
+}
