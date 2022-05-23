@@ -20,9 +20,10 @@ export const Chicken = (): JSX.Element => {
 			variants={variants}
 			transition={{
 				duration: 1,
+				delay: 1,
 				repeat: Infinity
 			}}
-			whileTap={{
+			whileFocus={{
 				scale: 1.2,
 				transition: {
 					duration: 0.2,
