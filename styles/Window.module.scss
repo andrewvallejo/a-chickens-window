@@ -93,7 +93,7 @@
 	inset: 0;
 	width: calc(1.9rem * 15);
 	aspect-ratio: 1;
-	animation: animateSprite 2s steps(7) 2s infinite;
+	animation: animateSprite 2s steps(7) .5s infinite;
 	pointer-events: none;
 }
 
