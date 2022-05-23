@@ -1,12 +1,27 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useState } from "react";
 
+import { useGameContext } from "../../context/GameContext";
 import styles from "../../styles/Window.module.scss";
 
 export const Chicken = (): JSX.Element => {
+	const { level } = useGameContext();
+
+	const variants = {
+		normal: {},
+		gameOver: { filter: [ "hue-rotate(0deg)", "hue-rotate(360deg)" ] }
+	};
+
 	return (
 		<motion.div
 			className={styles.chicken}
+			animate={level === 10 ? "gameOver" : "normal"}
+			variants={variants}
+			transition={{
+				duration: 1,
+				repeat: Infinity
+			}}
 			whileTap={{
 				scale: 1.2,
 				transition: {
