@@ -74,7 +74,7 @@ How many chickens can you generate?
 
 ## Special Thanks 
 
-I want to thank Ege for providing feedback on my [wireframes](https://www.figma.com/file/yaB8KfTEUeft3t71DQDWXA/Chickens-Window?node-id=30%3A2). While I wasn't aiming for perfection, Ege helped keep me grounded in my vision. I took the bare essentials and brought the pieces to life with animations using Framer Motion. 
+I want to thank [Ege Kandemir](https://www.linkedin.com/in/ege-kandemir/) for providing feedback on my [wireframes](https://www.figma.com/file/yaB8KfTEUeft3t71DQDWXA/Chickens-Window?node-id=30%3A2). While I wasn't aiming for perfection, Ege helped keep me grounded in my vision. I took the bare essentials and brought the pieces to life with animations using Framer Motion. 
 
 ---
 
