@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 
+import { GameOver } from "../components/GameOver";
 import { Layout } from "../components/Layout";
 import { MathProblem } from "../components/math/MathProblem";
 import { Window } from "../components/window/Window";
@@ -9,6 +10,7 @@ import { getRandomPair } from "../lib/math";
 import type { NextPage } from 'next'
 const Home: NextPage = () => {
   const [ currentLevel, setCurrentLevel ] = useState(0);
+  const [ isGameOver, setGameOver ] = useState(false);
 
 	const { level, addends, pending } = useGameContext();
 	const { setResult, setAddends, setPending } = useGameContext();
@@ -27,6 +29,9 @@ const Home: NextPage = () => {
 				setPending(true);
 				setCurrentLevel(level);
 			}
+			if (level === 10) {
+				setGameOver(true);
+			}
 		},
 		[ addends, currentLevel, level, pending, setAddends, setPending, setResult ]
 	);
@@ -34,7 +39,7 @@ const Home: NextPage = () => {
 
   return (
       <Layout>
-        <MathProblem />
+        {isGameOver ? <GameOver/>:<MathProblem />}
         <Window/>
       </Layout>
   )
