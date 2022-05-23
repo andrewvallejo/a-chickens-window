@@ -25,18 +25,20 @@
 
 .cloud {
 	position: absolute;
-	animation: animateClouds 20s infinite;
+	height: 5rem;
+	width: 30rem;
 	image-rendering: pixelated;
 	z-index: 1;
 	&.low {
-		top: 2rem;
-		left: 1rem;
-		transform: scale(.7);
+		top: 6rem;
+		left: 0rem;
+		transform: scale(.8);
 		filter: drop-shadow($shadow-clouds) drop-shadow($shadow-cloud-low);
 	}
 	&.high {
-		top: 6rem;
-		right: 5rem;
+		top: 2rem;
+		left: 45rem;
+		transform: scale(.5);
 		filter: drop-shadow($shadow-clouds) drop-shadow($shadow-cloud-high);
 	}
 }
