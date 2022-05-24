@@ -1,11 +1,19 @@
 import { motion } from "framer-motion";
 
-import styles from "../styles/Math.module.scss";
+import { useGameContext } from "../context/GameContext";
+import styles from "../styles/Home.module.scss";
 
 export const GameOver = (): JSX.Element => {
+	const { setIsGameOver, setLevel } = useGameContext();
+
+	const handleClick = (): void => {
+		setIsGameOver(false);
+		setLevel(0);
+	};
+
 	return (
-		<motion.section
-			className={styles.mathContainer}
+		<motion.ul
+			className={styles.gameOverContainer}
 			initial='hidden'
 			animate='visible'
 			variants={{
@@ -19,14 +27,22 @@ export const GameOver = (): JSX.Element => {
 				}
 			}}>
 			<motion.h2
-				className={styles.gameOver}
+				className={styles.gameOverTitle}
 				animate={{
 					filter: [ "hue-rotate(0deg)", "hue-rotate(360deg)" ],
 					scale: [ 1, 1.2, 1 ],
 					transition: { duration: 8, repeat: Infinity, delay: 1 }
 				}}>
-				GameOver!
+				Winner!!
 			</motion.h2>
-		</motion.section>
+
+			<motion.button
+				className={styles.gameOverButton}
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1, transition: { duration: 0.5, delay: 2 } }}
+				onClick={handleClick}>
+				Try again?
+			</motion.button>
+		</motion.ul>
 	);
 };
