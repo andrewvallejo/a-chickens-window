@@ -10,10 +10,9 @@ import { getRandomPair } from "../lib/math";
 import type { NextPage } from 'next'
 const Home: NextPage = () => {
   const [ currentLevel, setCurrentLevel ] = useState(0);
-  const [ isGameOver, setGameOver ] = useState(false);
 
-	const { level, addends, pending } = useGameContext();
-	const { setResult, setAddends, setPending } = useGameContext();
+	const { level, addends, pending, isGameOver } = useGameContext();
+	const { setResult, setAddends, setPending, setIsGameOver } = useGameContext();
 
 	useEffect(
 		() => {
@@ -32,16 +31,16 @@ const Home: NextPage = () => {
 				setCurrentLevel(level);
 			}
 			if (level === 10) {
-				setGameOver(true);
+				setIsGameOver(true);
 			}
 		},
-		[ addends, currentLevel, level, pending, setAddends, setPending, setResult ]
+		[addends, currentLevel, level, pending, setAddends, setIsGameOver, setPending, setResult]
 	);
 
 
   return (
       <Layout>
-        {isGameOver ? <GameOver/>:<MathProblem />}
+        {isGameOver ? <GameOver/> : <MathProblem />}
         <Window/>
       </Layout>
   )
