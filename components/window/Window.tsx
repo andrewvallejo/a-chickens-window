@@ -18,8 +18,22 @@ export const Window = (): JSX.Element => {
 				duration: 8
 			}}>
 			<div className={styles.sun} />
-			<Cloud>high</Cloud>
-			<Cloud>low</Cloud>
+			<motion.div
+				className={styles.cloud}
+				initial={{
+					y: 8
+				}}
+				animate={{
+					x: [ -1500, 1500 ],
+					y: [ 8, 4, 8 ]
+				}}
+				transition={{
+					duration: 60,
+					repeat: Infinity
+				}}>
+				<Cloud>high</Cloud>
+				<Cloud>low</Cloud>
+			</motion.div>
 			<Grass>
 				<Chicken />
 			</Grass>

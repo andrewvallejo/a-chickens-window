@@ -1,7 +1,9 @@
 <div align='center'>
 
 # A Chicken's Window
- 
+
+</div>
+
 </div>
 
 <!--#1. introduction  -->
@@ -9,28 +11,28 @@
 <summary>
 <img align='left' src="https://user-images.githubusercontent.com/17935770/169733747-f1fd3712-3c87-42c5-99f9-31178784f42f.png" alt="chicken" width="75"/>
 <sup>disclaimer!</sup>
-    
+
 <div align='center'>
-  
-A simple addition math game where each answer right spawns a **chicken!**
+
+A simple addition math game where each answer right spawns an **chicken!**
 
 </div>
 
 </summary>
-  
+
 <div align='center'>
-    
-<sub> I did this project for a skill test. The restriction was to create a math game in React within two days.
+
+<sub>This project was made for a skill test. The restriction were to create a math game in React within two days.
 Be sure to check out my wireframe made in [Figma](https://www.figma.com/file/yaB8KfTEUeft3t71DQDWXA/Chickens-Window?node-id=30%3A2) for this project.</sub>
 
 </div>
-  
+
 </details>
 
 https://user-images.githubusercontent.com/17935770/169733743-e429e582-91df-4234-917c-aab0aade10fb.mov
 
-<div align='center'>
-  
+https://user-images.githubusercontent.com/17935770/169733743-e429e582-91df-4234-917c-aab0aade10fb.mov
+
 **Made with** &nbsp;
 <img src="https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=000&style=flat-square" alt="React Badge">
 <img src="https://img.shields.io/badge/Next.js-000?logo=nextdotjs&logoColor=fff&style=flat-square" alt="Next.js Badge">
@@ -66,15 +68,15 @@ You may also use the `Up/Down Arrow Keys` to change your guess.
 >A chicken will spawn in the window with every correct guess.
 How many chickens can you generate?
 >
->Be sure to rearrange the chickens however you want! 
+>Be sure to rearrange the chickens however you want!
 >
->Once you solve ten problems, the chickens will go wild!
+>Once you solve ten problems the chickens will go wild!
 
 ---
 
-## Special Thanks 
+## Special Thanks
 
-I want to thank [Ege Kandemir](https://www.linkedin.com/in/ege-kandemir/) for providing feedback on my [wireframes](https://www.figma.com/file/yaB8KfTEUeft3t71DQDWXA/Chickens-Window?node-id=30%3A2). While I wasn't aiming for perfection, Ege helped keep me grounded in my vision. I took the bare essentials and brought the pieces to life with animations using Framer Motion. 
+I would like to thank Ege for providing feedback on my [wireframes](https://www.figma.com/file/yaB8KfTEUeft3t71DQDWXA/Chickens-Window?node-id=30%3A2). While I wasn't aiming for perfection, Ege helped keep me grounded in my vision. I took the bare essentials and brought the pieces life with animations using Framer Motion.
 
 ---
 

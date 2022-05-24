@@ -18,13 +18,24 @@ export const Chicken = (): JSX.Element => {
 			className={styles.chicken}
 			animate={level === 10 ? "gameOver" : "normal"}
 			variants={variants}
+			initial={{ y: -250, opacity: 0 }}
 			transition={{
 				duration: 1,
 				delay: 1,
 				repeat: Infinity
 			}}
-			whileFocus={{
-				scale: 1.2,
+			whileInView={{
+				y: 0,
+				opacity: 1,
+				transition: {
+					type: "spring",
+					delay: 0.3,
+					stiffness: 500,
+					damping: 35
+				}
+			}}
+			whileDrag={{
+				scale: 1.5,
 				transition: {
 					duration: 0.2,
 					ease: "easeInOut"
