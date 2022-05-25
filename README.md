@@ -31,7 +31,6 @@ Be sure to check out my wireframe made in [Figma](https://www.figma.com/file/yaB
 
 https://user-images.githubusercontent.com/17935770/169733743-e429e582-91df-4234-917c-aab0aade10fb.mov
 
-https://user-images.githubusercontent.com/17935770/169733743-e429e582-91df-4234-917c-aab0aade10fb.mov
 
 **Made with** &nbsp;
 <img src="https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=000&style=flat-square" alt="React Badge">
