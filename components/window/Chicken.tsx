@@ -34,13 +34,6 @@ export const Chicken = (): JSX.Element => {
 					damping: 35
 				}
 			}}
-			whileDrag={{
-				scale: 1.5,
-				transition: {
-					duration: 0.2,
-					ease: "easeInOut"
-				}
-			}}
 			drag={true}
 			dragConstraints={{
 				top: 20,
